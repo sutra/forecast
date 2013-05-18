@@ -62,7 +62,6 @@ public interface ForecastClient {
 			Date time) throws IOException;
 
 	/**
-	/**
 	 * Returns a specific time, past or future (for many places, 60 years in the
 	 * past to 10 years in the future) forcast.
 	 * 
