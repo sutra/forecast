@@ -3,6 +3,8 @@ package com.github.sutra.io.forecast;
 import java.util.TimeZone;
 
 /**
+ * The API response.
+ * 
  * @author Sutra Zhou
  */
 public interface Forecast {

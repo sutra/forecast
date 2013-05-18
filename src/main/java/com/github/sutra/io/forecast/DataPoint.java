@@ -3,6 +3,19 @@ package com.github.sutra.io.forecast;
 import java.util.Date;
 
 /**
+ * A data point object represents the various weather phenomena occurring at a
+ * specific instant of time, and has many varied properties. All of these
+ * properties (except time) are optional, and will only be set if we have that
+ * type of information for that location and time. Please note that minutely
+ * data points are always aligned to the nearest minute boundary, hourly points
+ * to the top of the hour, and daily points to midnight of that day.
+ * 
+ * Data points in the daily data block are special: instead of representing the
+ * weather phenomena at a given instant of time, they are an aggregate point
+ * representing the weather phenomena that will occur over the entire day. For
+ * precipitation fields, this aggregate is a maximum; for other fields, it is an
+ * average.
+ * 
  * @author Sutra Zhou
  */
 public interface DataPoint {

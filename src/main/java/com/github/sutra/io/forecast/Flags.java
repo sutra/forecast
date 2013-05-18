@@ -1,6 +1,9 @@
 package com.github.sutra.io.forecast;
 
 /**
+ * The flags object contains various metadata information related to the
+ * request.
+ * 
  * @author Sutra Zhou
  */
 public interface Flags {
