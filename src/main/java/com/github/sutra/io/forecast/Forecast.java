@@ -10,22 +10,30 @@ import java.util.TimeZone;
 public interface Forecast {
 
 	/**
+	 * Returns the latitude.
+	 * 
 	 * @return the latitude
 	 */
 	public abstract double getLatitude();
 
 	/**
+	 * Returns the longitude.
+	 * 
 	 * @return the longitude
 	 */
 	public abstract double getLongitude();
 
 	/**
+	 * Returns the time zone.
+	 * 
 	 * @return the timeZone
 	 */
 	public abstract TimeZone getTimeZone();
 
 	/**
-	 * @return the currently
+	 * Returns the current weather conditions.
+	 * 
+	 * @return The current weather conditions.
 	 */
 	public abstract DataPoint getCurrently();
 
