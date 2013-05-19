@@ -23,6 +23,9 @@ public class JacksonFlags implements Flags {
 	@JsonProperty("metar-stations")
 	private String[] metarStations;
 
+	@JsonProperty("metno-license")
+	private String metnoLicense;
+
 	@JsonProperty
 	private String[] sources;
 
@@ -62,6 +65,13 @@ public class JacksonFlags implements Flags {
 	 */
 	public String[] getMetarStations() {
 		return metarStations;
+	}
+
+	/**
+	 * @return the metnoLicense
+	 */
+	public String getMetnoLicense() {
+		return metnoLicense;
 	}
 
 	/**

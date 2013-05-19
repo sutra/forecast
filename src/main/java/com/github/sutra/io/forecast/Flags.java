@@ -39,6 +39,15 @@ public interface Flags {
 	public abstract String[] getSources();
 
 	/**
+	 * The presence of this property indicates that data from <a
+	 * href="http://api.met.no">api.met.no</a> was utilized in order to
+	 * facilitate this request (as per their license agreement).
+	 * 
+	 * @return
+	 */
+	public abstract String getMetnoLicense();
+
+	/**
 	 * @return the units
 	 */
 	public abstract String getUnits();
