@@ -38,12 +38,12 @@ public interface DataPoint {
 	/**
 	 * @return the sunriseTime
 	 */
-	public abstract Integer getSunriseTime();
+	public abstract Date getSunriseTime();
 
 	/**
 	 * @return the sunsetTime
 	 */
-	public abstract Integer getSunsetTime();
+	public abstract Date getSunsetTime();
 
 	/**
 	 * @return the precipIntensity
@@ -58,7 +58,7 @@ public interface DataPoint {
 	/**
 	 * @return the precipIntensityMaxTime
 	 */
-	public abstract Integer getPrecipIntensityMaxTime();
+	public abstract Date getPrecipIntensityMaxTime();
 
 	/**
 	 * @return the precipProbability
@@ -88,7 +88,7 @@ public interface DataPoint {
 	/**
 	 * @return the temperatureMinTime
 	 */
-	public abstract Integer getTemperatureMinTime();
+	public abstract Date getTemperatureMinTime();
 
 	/**
 	 * @return the temperatureMax
@@ -98,7 +98,7 @@ public interface DataPoint {
 	/**
 	 * @return the temperatureMaxTime
 	 */
-	public abstract Integer getTemperatureMaxTime();
+	public abstract Date getTemperatureMaxTime();
 
 	/**
 	 * @return the dewPoint
