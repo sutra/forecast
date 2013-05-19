@@ -20,10 +20,10 @@ public class JacksonDataPoint implements DataPoint {
 	private String icon;
 
 	@JsonProperty
-	private Integer sunriseTime;
+	private Date sunriseTime;
 
 	@JsonProperty
-	private Integer sunsetTime;
+	private Date sunsetTime;
 
 	@JsonProperty
 	private Float precipIntensity;
@@ -32,7 +32,7 @@ public class JacksonDataPoint implements DataPoint {
 	private Float precipIntensityMax;
 
 	@JsonProperty
-	private Integer precipIntensityMaxTime;
+	private Date precipIntensityMaxTime;
 
 	@JsonProperty
 	private Float precipProbability;
@@ -50,13 +50,13 @@ public class JacksonDataPoint implements DataPoint {
 	private Float temperatureMin;
 
 	@JsonProperty
-	private Integer temperatureMinTime;
+	private Date temperatureMinTime;
 
 	@JsonProperty
 	private Float temperatureMax;
 
 	@JsonProperty
-	private Integer temperatureMaxTime;
+	private Date temperatureMaxTime;
 
 	@JsonProperty
 	private Float dewPoint;
@@ -110,14 +110,14 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Integer getSunriseTime() {
+	public Date getSunriseTime() {
 		return sunriseTime;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Integer getSunsetTime() {
+	public Date getSunsetTime() {
 		return sunsetTime;
 	}
 
@@ -138,7 +138,7 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Integer getPrecipIntensityMaxTime() {
+	public Date getPrecipIntensityMaxTime() {
 		return precipIntensityMaxTime;
 	}
 
@@ -180,7 +180,7 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Integer getTemperatureMinTime() {
+	public Date getTemperatureMinTime() {
 		return temperatureMinTime;
 	}
 
@@ -194,7 +194,7 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Integer getTemperatureMaxTime() {
+	public Date getTemperatureMaxTime() {
 		return temperatureMaxTime;
 	}
 
