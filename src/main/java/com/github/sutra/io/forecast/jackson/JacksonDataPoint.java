@@ -11,7 +11,7 @@ import com.github.sutra.io.forecast.DataPoint;
 public class JacksonDataPoint implements DataPoint {
 
 	@JsonProperty
-	private Integer time;
+	private Long time;
 
 	@JsonProperty
 	private String summary;
@@ -20,10 +20,10 @@ public class JacksonDataPoint implements DataPoint {
 	private String icon;
 
 	@JsonProperty
-	private Date sunriseTime;
+	private Long sunriseTime;
 
 	@JsonProperty
-	private Date sunsetTime;
+	private Long sunsetTime;
 
 	@JsonProperty
 	private Float precipIntensity;
@@ -32,7 +32,7 @@ public class JacksonDataPoint implements DataPoint {
 	private Float precipIntensityMax;
 
 	@JsonProperty
-	private Date precipIntensityMaxTime;
+	private Long precipIntensityMaxTime;
 
 	@JsonProperty
 	private Float precipProbability;
@@ -50,13 +50,13 @@ public class JacksonDataPoint implements DataPoint {
 	private Float temperatureMin;
 
 	@JsonProperty
-	private Date temperatureMinTime;
+	private Long temperatureMinTime;
 
 	@JsonProperty
 	private Float temperatureMax;
 
 	@JsonProperty
-	private Date temperatureMaxTime;
+	private Long temperatureMaxTime;
 
 	@JsonProperty
 	private Float dewPoint;
@@ -86,11 +86,7 @@ public class JacksonDataPoint implements DataPoint {
 	 * {@inheritDoc}
 	 */
 	public Date getTime() {
-		if (time != null) {
-			return new Date(time.longValue() * 1000L);
-		} else {
-			return null;
-		}
+		return UnixTimeUtils.toDate(time);
 	}
 
 	/**
@@ -111,14 +107,14 @@ public class JacksonDataPoint implements DataPoint {
 	 * {@inheritDoc}
 	 */
 	public Date getSunriseTime() {
-		return sunriseTime;
+		return UnixTimeUtils.toDate(sunriseTime);
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
 	public Date getSunsetTime() {
-		return sunsetTime;
+		return UnixTimeUtils.toDate(sunsetTime);
 	}
 
 	/**
@@ -139,7 +135,7 @@ public class JacksonDataPoint implements DataPoint {
 	 * {@inheritDoc}
 	 */
 	public Date getPrecipIntensityMaxTime() {
-		return precipIntensityMaxTime;
+		return UnixTimeUtils.toDate(precipIntensityMaxTime);
 	}
 
 	/**
@@ -181,7 +177,7 @@ public class JacksonDataPoint implements DataPoint {
 	 * {@inheritDoc}
 	 */
 	public Date getTemperatureMinTime() {
-		return temperatureMinTime;
+		return UnixTimeUtils.toDate(temperatureMinTime);
 	}
 
 	/**
@@ -195,7 +191,7 @@ public class JacksonDataPoint implements DataPoint {
 	 * {@inheritDoc}
 	 */
 	public Date getTemperatureMaxTime() {
-		return temperatureMaxTime;
+		return UnixTimeUtils.toDate(temperatureMaxTime);
 	}
 
 	/**

@@ -12,6 +12,9 @@ import com.github.sutra.io.forecast.Units;
  */
 class Utils {
 
+	private Utils() {
+	}
+
 	public static URL buildURL(String url) {
 		try {
 			return new URL(url);

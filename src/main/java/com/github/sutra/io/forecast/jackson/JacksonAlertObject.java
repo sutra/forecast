@@ -15,7 +15,7 @@ public class JacksonAlertObject implements AlertObject {
 	private String title;
 
 	@JsonProperty
-	private Integer expires;
+	private Long expires;
 
 	@JsonProperty
 	private URI uri;
@@ -31,11 +31,7 @@ public class JacksonAlertObject implements AlertObject {
 	 * {@inheritDoc}
 	 */
 	public Date getExpires() {
-		if (expires != null) {
-			return new Date(expires.longValue() * 1000L);
-		} else {
-			return null;
-		}
+		return UnixTimeUtils.toDate(expires);
 	}
 
 	/**
