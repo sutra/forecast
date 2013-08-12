@@ -4,62 +4,62 @@ import java.util.TimeZone;
 
 /**
  * The API response.
- * 
+ *
  * @author Sutra Zhou
  */
 public interface Forecast {
 
 	/**
 	 * Returns the latitude.
-	 * 
+	 *
 	 * @return the latitude
 	 */
-	public abstract double getLatitude();
+	double getLatitude();
 
 	/**
 	 * Returns the longitude.
-	 * 
+	 *
 	 * @return the longitude
 	 */
-	public abstract double getLongitude();
+	double getLongitude();
 
 	/**
 	 * Returns the time zone.
-	 * 
+	 *
 	 * @return the timeZone
 	 */
-	public abstract TimeZone getTimeZone();
+	TimeZone getTimeZone();
 
 	/**
 	 * Returns the current weather conditions.
-	 * 
+	 *
 	 * @return The current weather conditions.
 	 */
-	public abstract DataPoint getCurrently();
+	DataPoint getCurrently();
 
 	/**
 	 * @return the minutely
 	 */
-	public abstract DataBlock getMinutely();
+	DataBlock getMinutely();
 
 	/**
 	 * @return the hourly
 	 */
-	public abstract DataBlock getHourly();
+	DataBlock getHourly();
 
 	/**
 	 * @return the daily
 	 */
-	public abstract DataBlock getDaily();
+	DataBlock getDaily();
 
 	/**
 	 * @return the alerts
 	 */
-	public abstract AlertObject[] getAlerts();
+	AlertObject[] getAlerts();
 
 	/**
 	 * @return the flags
 	 */
-	public abstract Flags getFlags();
+	Flags getFlags();
 
 }

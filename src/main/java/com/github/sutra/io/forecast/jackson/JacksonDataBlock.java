@@ -5,16 +5,27 @@ import com.github.sutra.io.forecast.DataBlock;
 import com.github.sutra.io.forecast.DataPoint;
 
 /**
+ * {@link DataBlock} implementation using Jackson.
+ *
  * @author Sutra Zhou
  */
 public class JacksonDataBlock implements DataBlock {
 
+	/**
+	 * @see {@link #getSummary()}.
+	 */
 	@JsonProperty
 	private String summary;
 
+	/**
+	 * @see {@link #getIcon()}.
+	 */
 	@JsonProperty
 	private String icon;
 
+	/**
+	 * @see {@link #getData()}.
+	 */
 	@JsonProperty
 	private JacksonDataPoint[] data;
 

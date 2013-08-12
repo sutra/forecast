@@ -13,31 +13,74 @@ import com.github.sutra.io.forecast.ForecastClient;
 import com.github.sutra.io.forecast.Units;
 
 /**
+ * {@link ForecastClient} implementation using Jackson.
+ *
  * @author Sutra Zhou
  */
 public class JacksonForecastClient implements ForecastClient {
 
-	private static final String DEFAULT_FORECAST_IO_API_ENDPOINT = "https://api.forecast.io";
+	/**
+	 * The default API endpoint.
+	 */
+	private static final String DEFAULT_FORECAST_IO_API_ENDPOINT =
+			"https://api.forecast.io";
 
+	/**
+	 * The API end point.
+	 */
 	private URL forecastEndpoint;
 
+	/**
+	 * The object mapper for converting JSON constructs to Java objects.
+	 */
 	private ObjectMapper mapper;
 
+	/**
+	 * Constructs a client with the specified API key.
+	 *
+	 * @param apiKey the API key.
+	 */
 	public JacksonForecastClient(String apiKey) {
 		this(Utils.buildURL(DEFAULT_FORECAST_IO_API_ENDPOINT), apiKey);
 	}
 
+	/**
+	 * Constructs a client with the specified API key and object mapper.
+	 *
+	 * @param apiKey the API key.
+	 * @param mapper the object mapper for converting JSOn constructs to
+	 * Java objects.
+	 */
 	public JacksonForecastClient(String apiKey, ObjectMapper mapper) {
-		this(Utils.buildURL(DEFAULT_FORECAST_IO_API_ENDPOINT), apiKey, mapper);
+		this(Utils.buildURL(DEFAULT_FORECAST_IO_API_ENDPOINT),
+				apiKey,
+				mapper);
 	}
 
+	/**
+	 * Constructs a client with the specified end point and API key.
+	 *
+	 * @param endpoint the API end point.
+	 * @param apiKey the API key.
+	 */
 	public JacksonForecastClient(URL endpoint, String apiKey) {
 		this(endpoint, apiKey, new ObjectMapper());
 	}
 
-	public JacksonForecastClient(URL endpoint, String apiKey, ObjectMapper mapper) {
+	/**
+	 * Constructs a client with the specified end point, API key
+	 * and object mapper.
+	 *
+	 * @param endpoint the API end point.
+	 * @param apiKey the API key.
+	 * @param mapper the object mapper for converting JSON constructs to
+	 * Java objects.
+	 */
+	public JacksonForecastClient(URL endpoint, String apiKey,
+			ObjectMapper mapper) {
 		this.mapper = mapper;
-		this.forecastEndpoint = Utils.buildURL(endpoint, "forecast/" + apiKey + "/");
+		forecastEndpoint = Utils.buildURL(endpoint,
+				"forecast/" + apiKey + "/");
 	}
 
 	/**
@@ -61,7 +104,8 @@ public class JacksonForecastClient implements ForecastClient {
 	 */
 	public Forecast forecast(double latitude, double longitude, Units units,
 			Block[] excludes) throws IOException {
-		return forecast(latitude, longitude, (Date) null, units, excludes);
+		return forecast(latitude, longitude, (Date) null, units,
+				excludes);
 	}
 
 	/**
@@ -77,7 +121,8 @@ public class JacksonForecastClient implements ForecastClient {
 	 */
 	public Forecast forecast(double latitude, double longitude, Date time,
 			Units units) throws IOException {
-		return forecast(latitude, longitude, time, units, (Block[]) null);
+		return forecast(latitude, longitude, time, units,
+				(Block[]) null);
 	}
 
 	/**
@@ -85,11 +130,19 @@ public class JacksonForecastClient implements ForecastClient {
 	 */
 	public Forecast forecast(double latitude, double longitude, Date time,
 			Units units, Block[] excludes) throws IOException {
-		String path = Utils.buildPath(latitude, longitude, time, units, excludes);
+		String path = Utils.buildPath(latitude, longitude, time, units,
+				excludes);
 		URL url = new URL(forecastEndpoint, path);
 		return forecast(url);
 	}
 
+	/**
+	 * Query forecast from the specified URL.
+	 * @param url the URL.
+	 * @return the forecast.
+	 * @throws IOException indicates error in converting JSON constructs
+	 * to Java objects.
+	 */
 	private Forecast forecast(URL url) throws IOException {
 		try {
 			return mapper.readValue(url, JacksonForecast.class);

@@ -11,35 +11,64 @@ import com.github.sutra.io.forecast.Flags;
 import com.github.sutra.io.forecast.Forecast;
 
 /**
+ * {@link Forecast} implementation using Jackson.
+ *
  * @author Sutra Zhou
  */
 @JsonIgnoreProperties("offset")
 public class JacksonForecast implements Forecast {
 
+	/**
+	 * @see {@link #getLatitude()}.
+	 */
 	@JsonProperty
 	private double latitude;
 
+	/**
+	 * @see {@link #getLongitude()}.
+	 */
 	@JsonProperty
 	private double longitude;
 
+	/**
+	 * @see {@link #getTimeZone()}.
+	 */
 	@JsonProperty("timezone")
 	private TimeZone timeZone;
 
+	/**
+	 * @see {@link #getCurrently()}.
+	 */
 	@JsonProperty
 	private JacksonDataPoint currently;
 
+	/**
+	 * @see {@link #getMinutely()}.
+	 */
 	@JsonProperty
 	private JacksonDataBlock minutely;
 
+	/**
+	 * @see {@link #getHourly()}.
+	 */
 	@JsonProperty
 	private JacksonDataBlock hourly;
 
+	/**
+	 * @see {@link #getDaily()}.
+	 */
 	@JsonProperty
 	private JacksonDataBlock daily;
 
+	/**
+	 * @see {@link #getAlerts()}.
+	 */
 	@JsonProperty
 	private JacksonAlertObject[] alerts;
 
+	/**
+	 * @see {@link #getFlags()}.
+	 */
 	@JsonProperty
 	private JacksonFlags flags;
 

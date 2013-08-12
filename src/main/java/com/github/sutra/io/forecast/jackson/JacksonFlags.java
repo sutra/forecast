@@ -4,31 +4,57 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.github.sutra.io.forecast.Flags;
 
 /**
+ * {@link Flags} implementation using Jackson.
+ *
  * @author Sutra Zhou
  */
 public class JacksonFlags implements Flags {
 
+	/**
+	 * @see {@link #getDarkskyStations()}.
+	 */
 	@JsonProperty("darksky-stations")
 	private String[] darkskyStations;
 
+	/**
+	 * @see {@link #getDatapointStations()}.
+	 */
 	@JsonProperty("datapoint-stations")
 	private String[] datapointStations;
 
+	/**
+	 * @see {@link #getIsdStations()}.
+	 */
 	@JsonProperty("isd-stations")
 	private String[] isdStations;
 
+	/**
+	 * @see {@link #getLampStations()}.
+	 */
 	@JsonProperty("lamp-stations")
 	private String[] lampStations;
 
+	/**
+	 * @see {@link #getMetarStations()}.
+	 */
 	@JsonProperty("metar-stations")
 	private String[] metarStations;
 
+	/**
+	 * @see {@link #getMetnoLicense()}.
+	 */
 	@JsonProperty("metno-license")
 	private String metnoLicense;
 
+	/**
+	 * @see {@link #getSources()}.
+	 */
 	@JsonProperty
 	private String[] sources;
 
+	/**
+	 * @see {@link #getUnits()}.
+	 */
 	@JsonProperty
 	private String units;
 
