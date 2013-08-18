@@ -165,6 +165,63 @@ public interface DataPoint {
 	Date getTemperatureMaxTime();
 
 	/**
+	 * Returns the apparent (or "feels like") temperature at the given time.
+	 * <p>
+	 * Not defined on daily data points.
+	 * </p>
+	 * <p>
+	 * A numerical value representing the apparent (or “feels like”)
+	 * temperature at the given time in degrees Fahrenheit.
+	 * </p>
+	 *
+	 * @return the apparent (or "feels like") temperature at the given time.
+	 */
+	Float getApparentTemperature();
+
+	/**
+	 * Returns the minimum apparent temperature.
+	 *
+	 * <p>
+	 * Only defined on daily data points.
+	 * </p>
+	 * <p>
+	 * A numerical values representing the minimum apparent temperatures
+	 * on the given day in degrees Fahrenheit.
+	 * </p>
+	 *
+	 * @return the minimum apparent temperature.
+	 */
+	Float getApparentTemperatureMin();
+
+	/**
+	 * Returns the time at which the minimum apparent temperature occurs.
+	 *
+	 * @return The time at which the minimum apparent temperature occurs.
+	 */
+	Date getApparentTemperatureMinTime();
+
+	/**
+	 * Returns the maximum apparent temperature.
+	 * <p>
+	 * Only defined on daily data points.
+	 * </p>
+	 * <p>
+	 * A numerical values representing the maximum apparent temperatures
+	 * on the given day in degrees Fahrenheit.
+	 * </p>
+	 *
+	 * @return the maximum apparent temperature.
+	 */
+	Float getApparentTemperatureMax();
+
+	/**
+	 * Returns the time at which the maximum apparent temperature occurs.
+	 *
+	 * @return The time at which the maximum apparent temperature occurs.
+	 */
+	Date getApparentTemperatureMaxTime();
+
+	/**
 	 * Returns the dew point at the given time in degrees Fahrenheit.
 	 *
 	 * @return The dew point at the given time in degrees Fahrenheit.

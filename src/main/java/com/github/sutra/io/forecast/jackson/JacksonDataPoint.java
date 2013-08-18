@@ -109,6 +109,36 @@ public class JacksonDataPoint implements DataPoint {
 	private Long temperatureMaxTime;
 
 	/**
+	 * @see {@link #getApparentTemperature()}.
+	 */
+	@JsonProperty
+	private Float apparentTemperature;
+
+	/**
+	 * @see {@link #getApparentTemperatureMin()}.
+	 */
+	@JsonProperty
+	private Float apparentTemperatureMin;
+
+	/**
+	 * @see {@link #getApparentTemperatureMinTime()}.
+	 */
+	@JsonProperty
+	private Long apparentTemperatureMinTime;
+
+	/**
+	 * @see {@link #getApparentTemperatureMax()}.
+	 */
+	@JsonProperty
+	private Float apparentTemperatureMax;
+
+	/**
+	 * @see {@link #getApparentTemperatureMaxTime()}.
+	 */
+	@JsonProperty
+	private Long apparentTemperatureMaxTime;
+
+	/**
 	 * @see {@link #getDewPoint()}.
 	 */
 	@JsonProperty
@@ -266,6 +296,41 @@ public class JacksonDataPoint implements DataPoint {
 	 */
 	public Date getTemperatureMaxTime() {
 		return UnixTimeUtils.toDate(temperatureMaxTime);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public Float getApparentTemperature() {
+		return apparentTemperature;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public Float getApparentTemperatureMin() {
+		return apparentTemperatureMin;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public Date getApparentTemperatureMinTime() {
+		return UnixTimeUtils.toDate(apparentTemperatureMinTime);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public Float getApparentTemperatureMax() {
+		return apparentTemperatureMax;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public Date getApparentTemperatureMaxTime() {
+		return UnixTimeUtils.toDate(apparentTemperatureMaxTime);
 	}
 
 	/**
