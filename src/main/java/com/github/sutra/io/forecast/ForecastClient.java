@@ -47,7 +47,8 @@ public interface ForecastClient {
 	 * @throws IOException indicate I/O exception.
 	 */
 	Forecast forecast(double latitude, double longitude,
-			Units units, Block[] excludes) throws IOException;
+			Units units,
+			Block[] excludes) throws IOException;
 
 	/**
 	 * Returns the current forecast (for the next week).
@@ -66,7 +67,9 @@ public interface ForecastClient {
 	 * @throws IOException indicate I/O exception.
 	 */
 	Forecast forecast(double latitude, double longitude,
-			Units units, Block[] excludes, Block extend) throws IOException;
+			Units units,
+			Block[] excludes,
+			Block extend) throws IOException;
 
 	/**
 	 * Returns a specific time, past or future (for many places,
@@ -93,7 +96,8 @@ public interface ForecastClient {
 	 * @throws IOException indicate I/O exception.
 	 */
 	Forecast forecast(double latitude, double longitude,
-			Date time, Units units) throws IOException;
+			Date time,
+			Units units) throws IOException;
 
 	/**
 	 * Returns a specific time, past or future (for many places,
@@ -108,7 +112,8 @@ public interface ForecastClient {
 	 * @throws IOException indicate I/O exception.
 	 */
 	Forecast forecast(double latitude, double longitude,
-			Date time, Units units,
+			Date time,
+			Units units,
 			Block[] excludes) throws IOException;
 
 	/**
@@ -129,7 +134,8 @@ public interface ForecastClient {
 	 * @throws IOException indicate I/O exception.
 	 */
 	Forecast forecast(double latitude, double longitude,
-			Date time, Units units,
+			Date time,
+			Units units,
 			Block[] excludes,
 			Block extend) throws IOException;
 

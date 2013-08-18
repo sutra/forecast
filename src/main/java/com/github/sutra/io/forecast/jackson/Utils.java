@@ -98,7 +98,10 @@ final class Utils {
 	 * @return the URL path.
 	 */
 	public static String buildPath(double latitude, double longitude,
-			Date time, Units units, Block[] excludes, Block extend) {
+			Date time,
+			Units units,
+			Block[] excludes,
+			Block extend) {
 		StringBuilder buf = new StringBuilder();
 
 		buf.append(latitude).append(",").append(longitude);

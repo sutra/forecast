@@ -55,7 +55,7 @@ public interface Forecast {
 	/**
 	 * @return the alerts
 	 */
-	AlertObject[] getAlerts();
+	Alert[] getAlerts();
 
 	/**
 	 * @return the flags

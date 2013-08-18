@@ -4,14 +4,14 @@ import java.net.URI;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.github.sutra.io.forecast.AlertObject;
+import com.github.sutra.io.forecast.Alert;
 
 /**
- * {@link AlertObject} implementation using Jackson.
+ * {@link Alert} implementation using Jackson.
  *
  * @author Sutra Zhou
  */
-public class JacksonAlertObject implements AlertObject {
+public class JacksonAlert implements Alert {
 
 	/**
 	 * @see {@link #getTitle()}.

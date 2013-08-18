@@ -9,7 +9,7 @@ import java.util.Date;
  *
  * @author Sutra Zhou
  */
-public interface AlertObject {
+public interface Alert {
 
 	/**
 	 * Returns a short text summary of the alert.

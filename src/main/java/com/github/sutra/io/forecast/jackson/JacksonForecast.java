@@ -4,7 +4,7 @@ import java.util.TimeZone;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.github.sutra.io.forecast.AlertObject;
+import com.github.sutra.io.forecast.Alert;
 import com.github.sutra.io.forecast.DataBlock;
 import com.github.sutra.io.forecast.DataPoint;
 import com.github.sutra.io.forecast.Flags;
@@ -64,7 +64,7 @@ public class JacksonForecast implements Forecast {
 	 * @see {@link #getAlerts()}.
 	 */
 	@JsonProperty
-	private JacksonAlertObject[] alerts;
+	private JacksonAlert[] alerts;
 
 	/**
 	 * @see {@link #getFlags()}.
@@ -124,7 +124,7 @@ public class JacksonForecast implements Forecast {
 	/**
 	 * {@inheritDoc}
 	 */
-	public AlertObject[] getAlerts() {
+	public Alert[] getAlerts() {
 		return alerts;
 	}
 
