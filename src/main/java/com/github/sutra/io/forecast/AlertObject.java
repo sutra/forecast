@@ -26,6 +26,15 @@ public interface AlertObject {
 	Date getExpires();
 
 	/**
+	 * Returns a detailed text description of the alert
+	 * from the appropriate weather service.
+	 *
+	 * @return a detailed text description of the alert
+	 * from the appropriate weather service.
+	 */
+	String getDescription();
+
+	/**
 	 * Returns an HTTP(S) URL that contains detailed information about the
 	 * alert.
 	 *

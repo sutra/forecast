@@ -26,6 +26,12 @@ public class JacksonAlertObject implements AlertObject {
 	private Long expires;
 
 	/**
+	 * @see {@link #getDescription()}.
+	 */
+	@JsonProperty
+	private String description;
+
+	/**
 	 * @see {@link #getUri()}.
 	 */
 	@JsonProperty
@@ -43,6 +49,13 @@ public class JacksonAlertObject implements AlertObject {
 	 */
 	public Date getExpires() {
 		return UnixTimeUtils.toDate(expires);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public String getDescription() {
+		return description;
 	}
 
 	/**
