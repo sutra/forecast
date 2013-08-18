@@ -111,6 +111,14 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
+	public Forecast forecast(double latitude, double longitude, Units units,
+			Block[] excludes, Block extend) throws IOException {
+		return forecast(latitude, longitude, (Date) null, units, excludes);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
 	public Forecast forecast(double latitude, double longitude, Date time)
 			throws IOException {
 		return forecast(latitude, longitude, time, (Units) null);
@@ -130,8 +138,17 @@ public class JacksonForecastClient implements ForecastClient {
 	 */
 	public Forecast forecast(double latitude, double longitude, Date time,
 			Units units, Block[] excludes) throws IOException {
+		return forecast(latitude, longitude, time, units, excludes,
+				(Block) null);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public Forecast forecast(double latitude, double longitude, Date time,
+			Units units, Block[] excludes, Block extend) throws IOException {
 		String path = Utils.buildPath(latitude, longitude, time, units,
-				excludes);
+				excludes, extend);
 		URL url = new URL(forecastEndpoint, path);
 		return forecast(url);
 	}

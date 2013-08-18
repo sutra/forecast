@@ -90,10 +90,15 @@ final class Utils {
 	 * @param time the time.
 	 * @param units the units.
 	 * @param excludes the excludes blocks.
+	 * @param extend return hourly data for the next seven days,
+	 * rather than the next two.
+	 * (This option is ignored on time machine requests.
+	 * When using this option, we strongly recommend ensuring
+	 * that your HTTP client supports compression.)
 	 * @return the URL path.
 	 */
 	public static String buildPath(double latitude, double longitude,
-			Date time, Units units, Block[] excludes) {
+			Date time, Units units, Block[] excludes, Block extend) {
 		StringBuilder buf = new StringBuilder();
 
 		buf.append(latitude).append(",").append(longitude);
@@ -115,6 +120,7 @@ final class Utils {
 			}
 			buf.append("units=").append(units);
 		}
+
 		if (excludes != null) {
 			if (query) {
 				buf.append('&');
@@ -124,6 +130,16 @@ final class Utils {
 			}
 			buf.append("exclude=").append(
 					Utils.join(excludes, ','));
+		}
+
+		if (extend != null) {
+			if (query) {
+				buf.append('&');
+			} else {
+				buf.append('?');
+				query = true;
+			}
+			buf.append("extend=").append(extend);
 		}
 
 		return buf.toString();
