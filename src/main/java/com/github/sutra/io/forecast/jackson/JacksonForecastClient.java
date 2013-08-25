@@ -1,6 +1,7 @@
 package com.github.sutra.io.forecast.jackson;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URL;
 import java.util.Date;
 
@@ -86,7 +87,7 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Forecast forecast(double latitude, double longitude)
+	public Forecast forecast(BigDecimal latitude, BigDecimal longitude)
 			throws IOException {
 		return forecast(latitude, longitude, (Units) null);
 	}
@@ -94,7 +95,7 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Forecast forecast(double latitude, double longitude,
+	public Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Units units)
 			throws IOException {
 		return forecast(latitude, longitude, units, (Block[]) null);
@@ -103,7 +104,7 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Forecast forecast(double latitude, double longitude,
+	public Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Units units,
 			Block[] excludes)
 			throws IOException {
@@ -114,7 +115,7 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Forecast forecast(double latitude, double longitude,
+	public Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Units units,
 			Block[] excludes,
 			Block extend)
@@ -126,7 +127,7 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Forecast forecast(double latitude, double longitude,
+	public Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Date time)
 			throws IOException {
 		return forecast(latitude, longitude, time, (Units) null);
@@ -135,7 +136,7 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Forecast forecast(double latitude, double longitude,
+	public Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Date time,
 			Units units)
 			throws IOException {
@@ -146,7 +147,7 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Forecast forecast(double latitude, double longitude,
+	public Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Date time,
 			Units units,
 			Block[] excludes)
@@ -158,7 +159,7 @@ public class JacksonForecastClient implements ForecastClient {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Forecast forecast(double latitude, double longitude,
+	public Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Date time,
 			Units units,
 			Block[] excludes,

@@ -1,5 +1,6 @@
 package com.github.sutra.io.forecast.jackson;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -46,13 +47,13 @@ public class JacksonDataPoint implements DataPoint {
 	 * @see {@link #getPrecipIntensity()}.
 	 */
 	@JsonProperty
-	private Float precipIntensity;
+	private BigDecimal precipIntensity;
 
 	/**
 	 * @see {@link #getPrecipIntensityMax()}.
 	 */
 	@JsonProperty
-	private Float precipIntensityMax;
+	private BigDecimal precipIntensityMax;
 
 	/**
 	 * @see {@link #getPrecipIntensityMaxTime()}.
@@ -64,7 +65,7 @@ public class JacksonDataPoint implements DataPoint {
 	 * @see {@link #getPrecipProbability()}.
 	 */
 	@JsonProperty
-	private Float precipProbability;
+	private BigDecimal precipProbability;
 
 	/**
 	 * @see {@link #getPrecipType()}.
@@ -76,19 +77,19 @@ public class JacksonDataPoint implements DataPoint {
 	 * @see {@link #getPrecipAccumulation()}.
 	 */
 	@JsonProperty
-	private Float precipAccumulation;
+	private BigDecimal precipAccumulation;
 
 	/**
 	 * @see {@link #getTemperature()}.
 	 */
 	@JsonProperty
-	private Float temperature;
+	private BigDecimal temperature;
 
 	/**
 	 * @see {@link #getTemperatureMin()}.
 	 */
 	@JsonProperty
-	private Float temperatureMin;
+	private BigDecimal temperatureMin;
 
 	/**
 	 * @see {@link #getTemperatureMinTime()}.
@@ -100,7 +101,7 @@ public class JacksonDataPoint implements DataPoint {
 	 * @see {@link #getTemperatureMax()}.
 	 */
 	@JsonProperty
-	private Float temperatureMax;
+	private BigDecimal temperatureMax;
 
 	/**
 	 * @see {@link #getTemperatureMaxTime()}.
@@ -112,13 +113,13 @@ public class JacksonDataPoint implements DataPoint {
 	 * @see {@link #getApparentTemperature()}.
 	 */
 	@JsonProperty
-	private Float apparentTemperature;
+	private BigDecimal apparentTemperature;
 
 	/**
 	 * @see {@link #getApparentTemperatureMin()}.
 	 */
 	@JsonProperty
-	private Float apparentTemperatureMin;
+	private BigDecimal apparentTemperatureMin;
 
 	/**
 	 * @see {@link #getApparentTemperatureMinTime()}.
@@ -130,7 +131,7 @@ public class JacksonDataPoint implements DataPoint {
 	 * @see {@link #getApparentTemperatureMax()}.
 	 */
 	@JsonProperty
-	private Float apparentTemperatureMax;
+	private BigDecimal apparentTemperatureMax;
 
 	/**
 	 * @see {@link #getApparentTemperatureMaxTime()}.
@@ -142,13 +143,13 @@ public class JacksonDataPoint implements DataPoint {
 	 * @see {@link #getDewPoint()}.
 	 */
 	@JsonProperty
-	private Float dewPoint;
+	private BigDecimal dewPoint;
 
 	/**
 	 * @see {@link #getWindSpeed()}.
 	 */
 	@JsonProperty
-	private Float windSpeed;
+	private BigDecimal windSpeed;
 
 	/**
 	 * @see {@link #getWindBearing()}.
@@ -160,31 +161,31 @@ public class JacksonDataPoint implements DataPoint {
 	 * @see {@link #getCloudCover()}.
 	 */
 	@JsonProperty
-	private Float cloudCover;
+	private BigDecimal cloudCover;
 
 	/**
 	 * @see {@link #getHumidity()}.
 	 */
 	@JsonProperty
-	private Float humidity;
+	private BigDecimal humidity;
 
 	/**
 	 * @see {@link #getPressure()}.
 	 */
 	@JsonProperty
-	private Float pressure;
+	private BigDecimal pressure;
 
 	/**
 	 * @see {@link #getVisibility()}.
 	 */
 	@JsonProperty
-	private Float visibility;
+	private BigDecimal visibility;
 
 	/**
 	 * @see {@link #getOzone()}.
 	 */
 	@JsonProperty
-	private Float ozone;
+	private BigDecimal ozone;
 
 	/**
 	 * {@inheritDoc}
@@ -224,14 +225,14 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getPrecipIntensity() {
+	public BigDecimal getPrecipIntensity() {
 		return precipIntensity;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getPrecipIntensityMax() {
+	public BigDecimal getPrecipIntensityMax() {
 		return precipIntensityMax;
 	}
 
@@ -245,7 +246,7 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getPrecipProbability() {
+	public BigDecimal getPrecipProbability() {
 		return precipProbability;
 	}
 
@@ -259,21 +260,21 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getPrecipAccumulation() {
+	public BigDecimal getPrecipAccumulation() {
 		return precipAccumulation;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getTemperature() {
+	public BigDecimal getTemperature() {
 		return temperature;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getTemperatureMin() {
+	public BigDecimal getTemperatureMin() {
 		return temperatureMin;
 	}
 
@@ -287,7 +288,7 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getTemperatureMax() {
+	public BigDecimal getTemperatureMax() {
 		return temperatureMax;
 	}
 
@@ -301,14 +302,14 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getApparentTemperature() {
+	public BigDecimal getApparentTemperature() {
 		return apparentTemperature;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getApparentTemperatureMin() {
+	public BigDecimal getApparentTemperatureMin() {
 		return apparentTemperatureMin;
 	}
 
@@ -322,7 +323,7 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getApparentTemperatureMax() {
+	public BigDecimal getApparentTemperatureMax() {
 		return apparentTemperatureMax;
 	}
 
@@ -336,14 +337,14 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getDewPoint() {
+	public BigDecimal getDewPoint() {
 		return dewPoint;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getWindSpeed() {
+	public BigDecimal getWindSpeed() {
 		return windSpeed;
 	}
 
@@ -357,35 +358,35 @@ public class JacksonDataPoint implements DataPoint {
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getCloudCover() {
+	public BigDecimal getCloudCover() {
 		return cloudCover;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getHumidity() {
+	public BigDecimal getHumidity() {
 		return humidity;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getPressure() {
+	public BigDecimal getPressure() {
 		return pressure;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getVisibility() {
+	public BigDecimal getVisibility() {
 		return visibility;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public Float getOzone() {
+	public BigDecimal getOzone() {
 		return ozone;
 	}
 

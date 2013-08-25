@@ -1,5 +1,6 @@
 package com.github.sutra.io.forecast.jackson;
 
+import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Date;
@@ -97,7 +98,8 @@ final class Utils {
 	 * that your HTTP client supports compression.)
 	 * @return the URL path.
 	 */
-	public static String buildPath(double latitude, double longitude,
+	public static String buildPath(BigDecimal latitude,
+			BigDecimal longitude,
 			Date time,
 			Units units,
 			Block[] excludes,

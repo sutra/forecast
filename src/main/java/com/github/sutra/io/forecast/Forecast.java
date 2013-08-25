@@ -1,5 +1,6 @@
 package com.github.sutra.io.forecast;
 
+import java.math.BigDecimal;
 import java.util.TimeZone;
 
 /**
@@ -14,14 +15,14 @@ public interface Forecast {
 	 *
 	 * @return the latitude
 	 */
-	double getLatitude();
+	BigDecimal getLatitude();
 
 	/**
 	 * Returns the longitude.
 	 *
 	 * @return the longitude
 	 */
-	double getLongitude();
+	BigDecimal getLongitude();
 
 	/**
 	 * Returns the time zone.

@@ -1,6 +1,7 @@
 package com.github.sutra.io.forecast;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Date;
 
 
@@ -19,7 +20,7 @@ public interface ForecastClient {
 	 * @return the current forecast (for the next week).
 	 * @throws IOException indicate I/O exception.
 	 */
-	Forecast forecast(double latitude, double longitude)
+	Forecast forecast(BigDecimal latitude, BigDecimal longitude)
 			throws IOException;
 
 	/**
@@ -32,7 +33,7 @@ public interface ForecastClient {
 	 * units.
 	 * @throws IOException indicate I/O exception.
 	 */
-	Forecast forecast(double latitude, double longitude,
+	Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Units units) throws IOException;
 
 	/**
@@ -46,7 +47,7 @@ public interface ForecastClient {
 	 * units excludes the specified blocks.
 	 * @throws IOException indicate I/O exception.
 	 */
-	Forecast forecast(double latitude, double longitude,
+	Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Units units,
 			Block[] excludes) throws IOException;
 
@@ -66,7 +67,7 @@ public interface ForecastClient {
 	 * units excludes the specified blocks.
 	 * @throws IOException indicate I/O exception.
 	 */
-	Forecast forecast(double latitude, double longitude,
+	Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Units units,
 			Block[] excludes,
 			Block extend) throws IOException;
@@ -81,7 +82,7 @@ public interface ForecastClient {
 	 * @return the forecast of the specified time.
 	 * @throws IOException indicate I/O exception.
 	 */
-	Forecast forecast(double latitude, double longitude,
+	Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Date time) throws IOException;
 
 	/**
@@ -95,7 +96,7 @@ public interface ForecastClient {
 	 * @return the forecast of the specified time with the specified units.
 	 * @throws IOException indicate I/O exception.
 	 */
-	Forecast forecast(double latitude, double longitude,
+	Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Date time,
 			Units units) throws IOException;
 
@@ -111,7 +112,7 @@ public interface ForecastClient {
 	 * @return the forecast of the specified time with the specified units.
 	 * @throws IOException indicate I/O exception.
 	 */
-	Forecast forecast(double latitude, double longitude,
+	Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Date time,
 			Units units,
 			Block[] excludes) throws IOException;
@@ -133,7 +134,7 @@ public interface ForecastClient {
 	 * @return the forecast of the specified time with the specified units.
 	 * @throws IOException indicate I/O exception.
 	 */
-	Forecast forecast(double latitude, double longitude,
+	Forecast forecast(BigDecimal latitude, BigDecimal longitude,
 			Date time,
 			Units units,
 			Block[] excludes,

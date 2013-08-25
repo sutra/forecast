@@ -1,5 +1,6 @@
 package com.github.sutra.io.forecast;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -74,7 +75,7 @@ public interface DataPoint {
 	 * corresponds to light precipitation, 0.1 corresponds to moderate
 	 * precipitation, and 0.4 corresponds to very heavy precipitation.
 	 */
-	Float getPrecipIntensity();
+	BigDecimal getPrecipIntensity();
 
 	/**
 	 * Returns the maximum expected intensity of precipitation on the given
@@ -83,7 +84,7 @@ public interface DataPoint {
 	 * @return The maximum expected intensity of precipitation on the given
 	 * day in inches of liquid water per hour.
 	 */
-	Float getPrecipIntensityMax();
+	BigDecimal getPrecipIntensityMax();
 
 	/**
 	 * Returns the time at which the maximum expected intensity of
@@ -102,7 +103,7 @@ public interface DataPoint {
 	 * precipIntensity is zero, then this property would be redundant
 	 * and will therefore not be defined.)
 	 */
-	Float getPrecipProbability();
+	BigDecimal getPrecipProbability();
 
 	/**
 	 * Returns the type of precipitation occurring at the given time.
@@ -123,14 +124,14 @@ public interface DataPoint {
 	 * given day. (If no accumulation is expected, this property will
 	 * not be defined.)
 	 */
-	Float getPrecipAccumulation();
+	BigDecimal getPrecipAccumulation();
 
 	/**
 	 * Returns the temperature at the given time in degrees Fahrenheit.
 	 *
 	 * @return The temperature at the given time in degrees Fahrenheit.
 	 */
-	Float getTemperature();
+	BigDecimal getTemperature();
 
 	/**
 	 * Returns the minimum temperature on the given day in degrees
@@ -139,7 +140,7 @@ public interface DataPoint {
 	 * @return The minimum temperature on the given day in degrees
 	 * Fahrenheit.
 	 */
-	Float getTemperatureMin();
+	BigDecimal getTemperatureMin();
 
 	/**
 	 * Returns the time at which the minimum temperature on the given day.
@@ -155,7 +156,7 @@ public interface DataPoint {
 	 * @return The maximum temperature on the given day in degrees
 	 * Fahrenheit.
 	 */
-	Float getTemperatureMax();
+	BigDecimal getTemperatureMax();
 
 	/**
 	 * Returns the time at which the maximum temperature on the given day.
@@ -176,7 +177,7 @@ public interface DataPoint {
 	 *
 	 * @return the apparent (or "feels like") temperature at the given time.
 	 */
-	Float getApparentTemperature();
+	BigDecimal getApparentTemperature();
 
 	/**
 	 * Returns the minimum apparent temperature.
@@ -191,7 +192,7 @@ public interface DataPoint {
 	 *
 	 * @return the minimum apparent temperature.
 	 */
-	Float getApparentTemperatureMin();
+	BigDecimal getApparentTemperatureMin();
 
 	/**
 	 * Returns the time at which the minimum apparent temperature occurs.
@@ -212,7 +213,7 @@ public interface DataPoint {
 	 *
 	 * @return the maximum apparent temperature.
 	 */
-	Float getApparentTemperatureMax();
+	BigDecimal getApparentTemperatureMax();
 
 	/**
 	 * Returns the time at which the maximum apparent temperature occurs.
@@ -226,14 +227,14 @@ public interface DataPoint {
 	 *
 	 * @return The dew point at the given time in degrees Fahrenheit.
 	 */
-	Float getDewPoint();
+	BigDecimal getDewPoint();
 
 	/**
 	 * Returns the wind speed in miles per hour.
 	 *
 	 * @return The wind speed in miles per hour.
 	 */
-	Float getWindSpeed();
+	BigDecimal getWindSpeed();
 
 	/**
 	 * Returns the direction that the wind is coming from in degrees.
@@ -252,7 +253,7 @@ public interface DataPoint {
 	 * clear sky, 0.4 to scattered clouds, 0.75 to broken cloud cover,
 	 * and 1 to completely overcast skies.
 	 */
-	Float getCloudCover();
+	BigDecimal getCloudCover();
 
 	/**
 	 * Returns the relative humidity.
@@ -260,21 +261,21 @@ public interface DataPoint {
 	 * @return A numerical value between 0 and 1 (inclusive) representing
 	 * the relative humidity.
 	 */
-	Float getHumidity();
+	BigDecimal getHumidity();
 
 	/**
 	 * Returns the sea-level air pressure in millibars.
 	 *
 	 * @return The sea-level air pressure in millibars.
 	 */
-	Float getPressure();
+	BigDecimal getPressure();
 
 	/**
 	 * Returns the average visibility in miles.
 	 *
 	 * @return The average visibility in miles, capped at 10 miles.
 	 */
-	Float getVisibility();
+	BigDecimal getVisibility();
 
 	/**
 	 * Returns the columnar density of total atmospheric ozone at the given
@@ -283,6 +284,6 @@ public interface DataPoint {
 	 * @return The columnar density of total atmospheric ozone at the given
 	 * time in Dobson units.
 	 */
-	Float getOzone();
+	BigDecimal getOzone();
 
 }

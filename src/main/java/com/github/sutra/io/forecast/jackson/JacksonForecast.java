@@ -1,5 +1,6 @@
 package com.github.sutra.io.forecast.jackson;
 
+import java.math.BigDecimal;
 import java.util.TimeZone;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -22,13 +23,13 @@ public class JacksonForecast implements Forecast {
 	 * @see {@link #getLatitude()}.
 	 */
 	@JsonProperty
-	private double latitude;
+	private BigDecimal latitude;
 
 	/**
 	 * @see {@link #getLongitude()}.
 	 */
 	@JsonProperty
-	private double longitude;
+	private BigDecimal longitude;
 
 	/**
 	 * @see {@link #getTimeZone()}.
@@ -75,14 +76,14 @@ public class JacksonForecast implements Forecast {
 	/**
 	 * {@inheritDoc}
 	 */
-	public double getLatitude() {
+	public BigDecimal getLatitude() {
 		return latitude;
 	}
 
 	/**
 	 * {@inheritDoc}
 	 */
-	public double getLongitude() {
+	public BigDecimal getLongitude() {
 		return longitude;
 	}
 
