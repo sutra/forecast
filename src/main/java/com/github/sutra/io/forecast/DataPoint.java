@@ -64,6 +64,14 @@ public interface DataPoint {
 	Date getSunsetTime();
 
 	/**
+	 * Returns a number representing the fractional part of the lunation number
+	 * of the given day.
+	 *
+	 * @return a number representing the fractional prt of the lunation number.
+	 */
+	BigDecimal getMoonPhase();
+
+	/**
 	 * Returns the average expected intensity of precipitation occurring at
 	 * the given time conditional on probability.
 	 *

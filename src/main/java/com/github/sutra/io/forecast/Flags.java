@@ -34,6 +34,11 @@ public interface Flags {
 	String[] getMetarStations();
 
 	/**
+	 * @return the madis stations.
+	 */
+	String[] getMadisStations();
+
+	/**
 	 * @return the sources
 	 */
 	String[] getSources();

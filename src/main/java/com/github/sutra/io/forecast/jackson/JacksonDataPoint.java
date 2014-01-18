@@ -44,6 +44,12 @@ public class JacksonDataPoint implements DataPoint {
 	private Long sunsetTime;
 
 	/**
+	 * @see {@link #getMoonPhase()}.
+	 */
+	@JsonProperty
+	private BigDecimal moonPhase;
+
+	/**
 	 * @see {@link #getPrecipIntensity()}.
 	 */
 	@JsonProperty
@@ -220,6 +226,13 @@ public class JacksonDataPoint implements DataPoint {
 	 */
 	public Date getSunsetTime() {
 		return UnixTimeUtils.toDate(sunsetTime);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public BigDecimal getMoonPhase() {
+		return moonPhase;
 	}
 
 	/**

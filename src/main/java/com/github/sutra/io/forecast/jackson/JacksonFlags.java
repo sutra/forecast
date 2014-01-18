@@ -41,6 +41,12 @@ public class JacksonFlags implements Flags {
 	private String[] metarStations;
 
 	/**
+	 * @see {@link #getMadisStations()}.
+	 */
+	@JsonProperty("madis-stations")
+	private String[] madisStations;
+
+	/**
 	 * @see {@link #getMetnoLicense()}.
 	 */
 	@JsonProperty("metno-license")
@@ -91,6 +97,13 @@ public class JacksonFlags implements Flags {
 	 */
 	public String[] getMetarStations() {
 		return metarStations;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public String[] getMadisStations() {
+		return madisStations;
 	}
 
 	/**
