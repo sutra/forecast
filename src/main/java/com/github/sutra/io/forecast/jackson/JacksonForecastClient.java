@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.Date;
 
 import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.sutra.io.forecast.Block;
@@ -80,6 +81,7 @@ public class JacksonForecastClient implements ForecastClient {
 	public JacksonForecastClient(URL endpoint, String apiKey,
 			ObjectMapper mapper) {
 		this.mapper = mapper;
+		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 		forecastEndpoint = Utils.buildURL(endpoint,
 				"forecast/" + apiKey + "/");
 	}
